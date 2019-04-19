@@ -14,6 +14,11 @@ import 'package:myapp/InheritedWidgetRoute.dart';
 import 'package:myapp/ThemeRoute.dart';
 import 'package:myapp/PointerEventRout.dart';
 import 'package:myapp/GestureDetectorRoute.dart';
+import 'package:myapp/DragRoute.dart';
+import 'package:myapp/ScaleRoute.dart';
+import 'package:myapp/GestureRecognizerRoute.dart';
+import 'package:myapp/BothDirectionRoute.dart';
+import 'package:myapp/GestureConflictRoute.dart';
 
 void main() => runApp(new MyApp());
 
@@ -33,7 +38,12 @@ class MyApp extends StatelessWidget {
     "InheritedWidget",
     "Theme",
     "PointerEvent",
-    "GestureDetector"
+    "GestureDetector",
+    "Drag",
+    "Scale",
+    "GestureRecognizer",
+    "BothDirection(手势竞争)",
+    "GestureConflict(手势冲突)"
   ];
   @override
   Widget build(BuildContext context) {
@@ -54,14 +64,19 @@ class MyApp extends StatelessWidget {
         "InheritedWidget": (ctx) => InheritedWidgetRoute(),
         "Theme": (ctx) => ThemeRoute(),
         "PointerEvent": (ctx) => PointerEventRoute(),
-        "GestureDetector": (ctx) => GestureDetectorRoute()
+        "GestureDetector": (ctx) => GestureDetectorRoute(),
+        "Drag": (ctx) => DragRoute(),
+        "Scale": (ctx) => ScaleRoute(),
+        "GestureRecognizer": (ctx) => GestureRecognizerRoute(),
+        "BothDirection(手势竞争)": (ctx) => BothDirectionRoute(),
+        "GestureConflict(手势冲突)": (ctx) => GestureConflictRoute()
       },
       theme: Theme.of(context),
       home: Scaffold(
           appBar: AppBar(title: Text("Flutter"), centerTitle: true),
           body: ListView(
             physics: BouncingScrollPhysics(),
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            padding: EdgeInsets.fromLTRB(16.0, 0, 16.0, 16.0),
             children: strs
                 .map((e) => Builder(
                       builder: (context) => RaisedButton(
