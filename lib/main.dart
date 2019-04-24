@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:myapp/FormRoute.dart';
 import 'package:myapp/WrapRoute.dart';
 import 'package:myapp/ScaffoldRoute.dart';
@@ -19,6 +20,17 @@ import 'package:myapp/ScaleRoute.dart';
 import 'package:myapp/GestureRecognizerRoute.dart';
 import 'package:myapp/BothDirectionRoute.dart';
 import 'package:myapp/GestureConflictRoute.dart';
+import 'package:myapp/ScaleAnimationRoute.dart';
+import 'package:myapp/PageRouteBuilderRoute.dart';
+import 'package:myapp/CustomPageRoute.dart';
+import 'package:myapp/HeroAnimationRoute.dart';
+import 'package:myapp/StaggerAnimationRoute.dart';
+import 'package:myapp/GradientButtonRoute.dart';
+import 'package:myapp/FileOperationRoute.dart';
+import 'package:myapp/HttpClientRoute.dart';
+import 'package:myapp/WebSocketRoute.dart';
+import 'package:myapp/GaussianBlurRoute.dart';
+import 'package:myapp/ScreenshotRoute.dart';
 
 void main() => runApp(new MyApp());
 
@@ -43,11 +55,23 @@ class MyApp extends StatelessWidget {
     "Scale",
     "GestureRecognizer",
     "BothDirection(手势竞争)",
-    "GestureConflict(手势冲突)"
+    "GestureConflict(手势冲突)",
+    "ScaleAnimation",
+    "PageRouteBuilder",
+    "CustomPageRoute",
+    "HeroAnimation",
+    "StaggerAnimation",
+    "GradientButton",
+    "FileOperation",
+    "HttpClient",
+    "WebSocket",
+    "GaussianBlur",
+    "Screenshot"
   ];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Flutter",
       routes: {
         "Form": (ctx) => FormRoute(),
@@ -69,7 +93,18 @@ class MyApp extends StatelessWidget {
         "Scale": (ctx) => ScaleRoute(),
         "GestureRecognizer": (ctx) => GestureRecognizerRoute(),
         "BothDirection(手势竞争)": (ctx) => BothDirectionRoute(),
-        "GestureConflict(手势冲突)": (ctx) => GestureConflictRoute()
+        "GestureConflict(手势冲突)": (ctx) => GestureConflictRoute(),
+        "ScaleAnimation": (ctx) => ScaleAnimationRoute(),
+        "PageRouteBuilder": (ctx) => PageRouteBuilderRoute(),
+        "CustomPageRoute": (ctx) => CustomPageRoute(),
+        "HeroAnimation": (ctx) => HeroAnimationRoute(),
+        "StaggerAnimation": (ctx) => StaggerAnimationRoute(),
+        "GradientButton": (ctx) => GradientButtonRoute(),
+        "FileOperation": (ctx) => FileOperationRoute(),
+        "HttpClient": (ctx) => HttpClientRoute(),
+        "WebSocket": (ctx) => WebSocketRoute(),
+        "GaussianBlur": (ctx) => GaussianBlurRoute(),
+        "Screenshot": (ctx) => ScreenshotRoute()
       },
       theme: Theme.of(context),
       home: Scaffold(
