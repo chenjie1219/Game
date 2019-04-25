@@ -30,7 +30,6 @@ import 'package:myapp/FileOperationRoute.dart';
 import 'package:myapp/HttpClientRoute.dart';
 import 'package:myapp/WebSocketRoute.dart';
 import 'package:myapp/GaussianBlurRoute.dart';
-import 'package:myapp/ScreenshotRoute.dart';
 
 void main() => runApp(new MyApp());
 
@@ -66,7 +65,6 @@ class MyApp extends StatelessWidget {
     "HttpClient",
     "WebSocket",
     "GaussianBlur",
-    "Screenshot"
   ];
   @override
   Widget build(BuildContext context) {
@@ -104,7 +102,6 @@ class MyApp extends StatelessWidget {
         "HttpClient": (ctx) => HttpClientRoute(),
         "WebSocket": (ctx) => WebSocketRoute(),
         "GaussianBlur": (ctx) => GaussianBlurRoute(),
-        "Screenshot": (ctx) => ScreenshotRoute()
       },
       theme: Theme.of(context),
       home: Scaffold(
